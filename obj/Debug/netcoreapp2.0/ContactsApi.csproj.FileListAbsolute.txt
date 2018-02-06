@@ -1,0 +1,10 @@
+/home/m69/CoreProjects/ContactsApi/bin/Debug/netcoreapp2.0/ContactsApi.deps.json
+/home/m69/CoreProjects/ContactsApi/bin/Debug/netcoreapp2.0/ContactsApi.runtimeconfig.json
+/home/m69/CoreProjects/ContactsApi/bin/Debug/netcoreapp2.0/ContactsApi.runtimeconfig.dev.json
+/home/m69/CoreProjects/ContactsApi/bin/Debug/netcoreapp2.0/ContactsApi.dll
+/home/m69/CoreProjects/ContactsApi/bin/Debug/netcoreapp2.0/ContactsApi.pdb
+/home/m69/CoreProjects/ContactsApi/obj/Debug/netcoreapp2.0/ContactsApi.csproj.CoreCompileInputs.cache
+/home/m69/CoreProjects/ContactsApi/obj/Debug/netcoreapp2.0/ContactsApi.AssemblyInfoInputs.cache
+/home/m69/CoreProjects/ContactsApi/obj/Debug/netcoreapp2.0/ContactsApi.AssemblyInfo.cs
+/home/m69/CoreProjects/ContactsApi/obj/Debug/netcoreapp2.0/ContactsApi.dll
+/home/m69/CoreProjects/ContactsApi/obj/Debug/netcoreapp2.0/ContactsApi.pdb
