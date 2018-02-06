@@ -13,7 +13,7 @@ namespace ContactsApi.Controllers
  
         public ContactsController(IContactsRepository _repo)
         {
-            _repo = new ContactsRepository();
+            //_repo = new ContactsRepository();
             ContactsRepo = _repo;
         }
         
