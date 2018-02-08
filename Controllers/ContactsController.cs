@@ -3,6 +3,7 @@ using ContactsApi.Repository;
 using Microsoft.AspNetCore.Mvc;
  
 using System.Collections.Generic;
+using ContactsApi.Contexts;
  
 namespace ContactsApi.Controllers
 {
@@ -13,7 +14,6 @@ namespace ContactsApi.Controllers
  
         public ContactsController(IContactsRepository _repo)
         {
-            //_repo = new ContactsRepository();
             ContactsRepo = _repo;
         }
         
