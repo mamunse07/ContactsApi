@@ -11,9 +11,10 @@ using System;
 namespace ContactsApi.Migrations
 {
     [DbContext(typeof(ContactsContext))]
-    partial class ContactsContextModelSnapshot : ModelSnapshot
+    [Migration("20180210095109_todo class added")]
+    partial class todoclassadded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

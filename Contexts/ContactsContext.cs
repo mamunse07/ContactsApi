@@ -10,10 +10,11 @@ namespace ContactsApi.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                @"Data Source=.\\SQLEXPRESS;Initial Catalog=ContactsDB;Integrated Security=True;MultipleActiveResultSets=True;ConnectRetryCount=0");
+                @"Data Source=localhost;Initial Catalog=ContactsContext;User ID=SA;Password=Mamun420");
             base.OnConfiguring(optionsBuilder);
         }
         public ContactsContext(){ }
         public DbSet<Contacts> Contacts { get; set; }
+        public DbSet<TodoItem> TodoItems { get; set; }
     }
 }
