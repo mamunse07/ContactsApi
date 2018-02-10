@@ -12,9 +12,9 @@ namespace ContactsApi.Controllers
     {
         public IContactsRepository ContactsRepo { get; set; }
  
-        public ContactsController(IContactsRepository _repo)
+        public ContactsController()
         {
-            ContactsRepo = _repo;
+            ContactsRepo = new ContactsRepository(new ContactsContext());
         }
         
         [HttpGet]
@@ -24,7 +24,7 @@ namespace ContactsApi.Controllers
         }
  
         [HttpGet("{id}", Name = "GetContacts")]
-        public IActionResult GetById(string id)
+        public IActionResult GetById(int id)
         {
             var item = ContactsRepo.Find(id);
             if (item == null)
@@ -46,7 +46,7 @@ namespace ContactsApi.Controllers
         }
  
         [HttpPut("{id}")]
-        public IActionResult Update(string id, [FromBody] Contacts item)
+        public IActionResult Update(int id, [FromBody] Contacts item)
         {
             if (item == null)
             {
@@ -62,7 +62,7 @@ namespace ContactsApi.Controllers
         }
  
         [HttpDelete("{id}")]
-        public void Delete(string id)
+        public void Delete(int id)
         {
             ContactsRepo.Remove(id);
         }

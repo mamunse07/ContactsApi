@@ -41,9 +41,9 @@ namespace ContactsApi.Repository
  
         
  
-        public Contacts Find(string key)
+        public Contacts Find(int key)
         {
-            return _context.Contacts.Where(e => e.MobilePhone.Equals(key)).SingleOrDefault();
+            return _context.Contacts.Where(e => e.Id.Equals(key)).SingleOrDefault();
         }
 
         /*
@@ -57,9 +57,9 @@ namespace ContactsApi.Repository
 
         
         
-        public void Remove(string Id)
+        public void Remove(int Id)
         {
-            var itemToRemove = _context.Contacts.SingleOrDefault(r => r.MobilePhone == Id);
+            var itemToRemove = _context.Contacts.SingleOrDefault(r => r.Id == Id);
             if (itemToRemove != null)
                 _context.Contacts.Remove(itemToRemove);
                 _context.SaveChanges();            
@@ -73,10 +73,11 @@ namespace ContactsApi.Repository
  
         public void Update(Contacts item)
         {
-            var itemToUpdate = _context.Contacts.SingleOrDefault(r => r.MobilePhone == item.MobilePhone);
+            var itemToUpdate = _context.Contacts.SingleOrDefault(r => r.Id == item.Id);
             if (itemToUpdate != null)
             {
                 _context.Update(itemToUpdate);
+                _context.SaveChanges();
                 /*itemToUpdate.FirstName = item.FirstName;
                 itemToUpdate.LastName = item.LastName;
                 itemToUpdate.IsFamilyMember = item.IsFamilyMember;
